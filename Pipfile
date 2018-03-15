@@ -29,4 +29,3 @@ ipython = "*"
 [packages]
 
 pbr = ">=3.0"
-"9667247" = {path = "./../apistar"}
