@@ -1,17 +1,18 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 
+
 [dev-packages]
-flake8 = "*"
+
+"flake8" = "*"
 pycodestyle = "*"
 yapf = "*"
 isort = "*"
-autopep8 = "*"
-
+"autopep8" = "*"
 cryptography = "*"
-PyYAML = "*"
-
+pyyaml = "*"
 pytest = "*"
 pytest-cov = "*"
 tox = "*"
@@ -22,11 +23,10 @@ sphinx = "*"
 sphinx-autobuild = "*"
 pytest-pythonpath = "*"
 pytest-timeit = "*"
-
-
+ipython = "*"
 
 
 [packages]
+
 pbr = ">=3.0"
-
-
+"9667247" = {path = "./../apistar"}
