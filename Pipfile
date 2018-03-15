@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+pycodestyle = "*"
+yapf = "*"
+isort = "*"
+autopep8 = "*"
+
+cryptography = "*"
+PyYAML = "*"
+
+pytest = "*"
+pytest-cov = "*"
+tox = "*"
+pipenv-to-requirements = "*"
+"flake8-coding" = "*"
+"flake8-comprehensions" = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+pytest-pythonpath = "*"
+pytest-timeit = "*"
+
+
+
+
+[packages]
+pbr = ">=3.0"
+
+
