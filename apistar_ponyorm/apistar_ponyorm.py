@@ -1,12 +1,42 @@
-from pony.orm import db_session
-from apistar import Route
+# Third Party Libraries
+from pony.orm import Database, db_session
 
 
-# def pony_db(route: Route):
-#     route.handler = orm.db_session(route.handler)
-def pony_db(route: Route):
-    route.handler = db_session(route.handler)
+"""
+Base functions to auto use @db_session  in  views.
 
+This should be added in App declaration :
+app = App(
+    routes=[....],
+    run_before_handler=[ponydb_open],
+    run_after_handler=[ponydb_close],
+    run_on_exception=[ponydb_exception],
+    )
+
+It's important to add ponydb_exception to ensure that  database transaction
+will be closed carrefuly
+"""
+
+
+def ponydb_open():
+    db_session.__enter__()
+
+
+def ponydb_close(response):
+    db_session.__exit__()
+    return response
+
+
+def ponydb_exception(exc: Exception):
+    db_session.__exit__()
+    return exc
+
+
+"""
+Base database instance
+"""
+
+db = Database()
 
 # class PonyBackend(object):
 
