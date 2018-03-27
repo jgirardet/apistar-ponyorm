@@ -24,10 +24,19 @@ Third-party for apistar using pony orm
 Features
 --------
 
-* TODO
+Provide Basase functions to auto use @db_session  in  views.
 
-Usage
------
+This should be added in App declaration :
+app = App(
+    routes=[....],
+    run_before_handler=[ponydb_open],
+    run_after_handler=[ponydb_close],
+    run_on_exception=[ponydb_exception],
+    )
+
+It's important to add ponydb_exception to ensure that  database transaction
+will be closed carrefuly
+
 
 * TODO
 
