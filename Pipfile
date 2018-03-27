@@ -19,8 +19,6 @@ pipenv-to-requirements = "*"
 "flake8-comprehensions" = "*"
 pytest-pythonpath = "*"
 ipython = "*"
-"e1839a8" = {editable = true, path = "."}
-
 
 [packages]
 
