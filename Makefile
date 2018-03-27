@@ -2,7 +2,7 @@
 
 MODULE:=apistar_ponyorm
 
-all: dev style checks requirements.txt  build dists doc test-unit test-coverage
+all: dev style checks requirements.txt  build dists test-unit test-coverage
 
 dev:
 	pipenv install --dev --python 3.6
@@ -73,11 +73,6 @@ push:
 	git push origin --all
 	git push origin --tags
 
-doc:
-	pipenv run python setup.py build_sphinx
-
-doc-auto:
-	pipenv run sphinx-autobuild docs docs/_build
 	
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 

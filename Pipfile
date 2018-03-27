@@ -7,10 +7,8 @@ verify_ssl = true
 [dev-packages]
 
 "flake8" = "*"
-pycodestyle = "*"
 yapf = "*"
 isort = "*"
-"autopep8" = "*"
 cryptography = "*"
 pyyaml = "*"
 pytest = "*"
@@ -19,13 +17,13 @@ tox = "*"
 pipenv-to-requirements = "*"
 "flake8-coding" = "*"
 "flake8-comprehensions" = "*"
-sphinx = "*"
-sphinx-autobuild = "*"
 pytest-pythonpath = "*"
-pytest-timeit = "*"
 ipython = "*"
+"e1839a8" = {editable = true, path = "."}
 
 
 [packages]
 
 pbr = ">=3.0"
+apistar = {editable = true, git = "https://github.com/encode/apistar.git", ref = "level-up"}
+pony = {git = "https://github.com/ponyorm/pony.git", ref = "orm-migrations", editable = true}
