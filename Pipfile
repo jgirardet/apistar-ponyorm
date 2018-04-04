@@ -9,8 +9,6 @@ verify_ssl = true
 "flake8" = "*"
 yapf = "*"
 isort = "*"
-cryptography = "*"
-pyyaml = "*"
 pytest = "*"
 pytest-cov = "*"
 tox = "*"
@@ -19,6 +17,8 @@ pipenv-to-requirements = "*"
 "flake8-comprehensions" = "*"
 pytest-pythonpath = "*"
 ipython = "*"
+"e1839a8" = {path = ".", editable = true}
+
 
 [packages]
 

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Ex",
+				"Exception〔class〕"
+			],
+			[
+				"resol",
+				"resolver_cache〔variable〕"
+			],
+			[
+				"rou",
+				"routes"
+			],
+			[
 				"pon",
 				"pony_db〔module〕"
 			],
@@ -246,10 +258,6 @@
 			[
 				"obj",
 				"obj_api"
-			],
-			[
-				"Ex",
-				"extras〔module〕"
 			],
 			[
 				"ps",
@@ -506,14 +514,6 @@
 			[
 				"Ca",
 				"CAPWORDS_ATTRS\tstatement"
-			],
-			[
-				"No",
-				"NotFound\tclass"
-			],
-			[
-				"Pait",
-				"PatientNoIdSchema\tclass"
 			]
 		]
 	},
@@ -524,22 +524,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 233.0,
-		"last_filter": "isort",
+		"height": 167.0,
+		"last_filter": "push",
 		"selected_items":
 		[
-			[
-				"isort",
-				"ImportSort: Sort imports"
-			],
-			[
-				"togg",
-				"Toggle Comment"
-			],
-			[
-				"re",
-				"Git: Track Remote Branch"
-			],
 			[
 				"push",
 				"Git: Push"
@@ -547,6 +535,18 @@
 			[
 				"q",
 				"Git: Quick Commit (repo)"
+			],
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"isort",
+				"ImportSort: Sort imports"
+			],
+			[
+				"re",
+				"Git: Track Remote Branch"
 			],
 			[
 				"toggl",
@@ -1123,6 +1123,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"orm",
+			"r",
 			"test_delete_pass",
 			"Update",
 			"one",
@@ -1194,6 +1196,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 116.0
 	},
 	"output.mdpopups":
 	{

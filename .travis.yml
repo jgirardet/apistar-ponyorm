@@ -17,22 +17,8 @@ install:
 script:
   - make check
   - make dist
-  - make doc
   - make test-unit
   - make test-coverage
 
 after_success:
   coveralls
-
-# After you create the Github repo and add it to Travis, run the
-# travis_pypi_setup.py script to finish PyPI deployment setup
-deploy:
-  provider: pypi
-  user: jgirardet
-  distributions: sdist bdist_wheel
-  password:
-    secure: Vw68IJzzw0J2q4LMyjDoSbjsGJfk8LzO7wrD7PMzzKtw8FxUgqsAxqo5lK9ksWBN7YYBtg9fUIIPBcF4s502IP65yAIi0R/qkaM6nB3jzWpfh4o/JLPzivx9DnTorPFnGq6IAgyKZimOqdZ+Eo5swlpMV7ga3CgdWOcnbi5BJr5nGv7YKkMlHjZXP4FlUa0QZtKEXqex1OQbJVPNQpg4g4ZoSipuJdtstjAcRZ/O9KyS/CH46S6/A8f+9tF4MK8l0VDra9xdJ7BfcRNdPsHA3nRFdVYxaMKNSLiaLq3G7rF/esqfBVOTTzopE8U4WpFPKBbkVcddz+KagWAVO/w1hCkgzvRNAztA8iQ6V+Vb5i2rkHdKU1AacQ2dUYHczkvF515fCkqgl3vemUvLtqjBdKudu6Oj3faBG8ayY/s++GYNKuh4Av5x0kamBxIW0HtHhdvt2p8IK+1HhIiKj9vn9MqQm4CNU1vfHnR9Q/lkixug+ljc7Rw7xapE4mjMxCi68eDXLEkqNyuUFS/0H25HQK8/YtbjOeSqD1ql3z3Byfsk8jnAKB+YhIFHDY1nB40DTD4buL/2tgeU7LWdm/6vLLZkyQV556MC2BLVTgnXuziw2/TPMNjFj1pmn40Rl2R1WDe47dxzudTYRjEKviUMTW9fZzyqmIDelLCbMNqC9VA=
-  on:
-    tags: true
-    repo: jgirardet/apistar_ponyorm
-    python: 3.5

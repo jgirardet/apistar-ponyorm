@@ -5,7 +5,7 @@ MODULE:=apistar_ponyorm
 all: dev style checks requirements.txt  build dists test-unit test-coverage
 
 dev:
-	pipenv install --dev --python 3.6
+	pipenv install --dev --python 3.6 --skip-lock
 
 install-local:
 	pipenv install --python 3.6
