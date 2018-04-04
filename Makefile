@@ -60,8 +60,8 @@ sdist:
 wheels:
 	pipenv run python setup.py bdist_wheel
 
-pypi-publish: build
-	pipenv run python setup.py upload -r pypi
+deploy: build
+	twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 
 update:
 	pipenv update -d

@@ -10,6 +10,6 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
--e git+https://github.com/encode/apistar.git#egg=apistar
--e git+https://github.com/ponyorm/pony.git#egg=pony
+-e git+https://github.com/encode/apistar.git@level-up#egg=apistar
+-e git+https://github.com/ponyorm/pony.git@orm-migrations#egg=pony
 pbr>=3.0
