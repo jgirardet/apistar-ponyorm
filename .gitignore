@@ -61,3 +61,5 @@ AUTHORS
 Pipfile.lock
 *.sublime-project
 *.sublime-workspace
+requirements.txt
+requirements-dev.txt

@@ -1,6 +1,6 @@
 .PHONY: build
 
-MODULE:=apistar_ponyorm
+MODULE:=apistar_ponyorm.py
 
 all: dev style checks requirements.txt  build dists test-unit test-coverage
 
