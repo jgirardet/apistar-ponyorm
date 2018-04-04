@@ -17,8 +17,4 @@ install:
 script:
   - make check
   - make dist
-  - make test-unit
   - make test-coverage
-
-after_success:
-  coveralls

@@ -36,7 +36,7 @@ shell:
 	pipenv shell
 
 test-unit:
-	pipenv run pytest 
+	pipenv run pytest --cov $(MODULE) --cov-report term-missing --cov-fail-under=100
 
 test-coverage:
 	pipenv run py.test  --cov $(MODULE) --cov-report term-missing --cov-report html
