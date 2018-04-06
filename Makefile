@@ -61,7 +61,7 @@ wheels:
 	pipenv run python setup.py bdist_wheel
 
 deploy: build
-	twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+	 pipenv run twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 
 update:
 	pipenv update -d
