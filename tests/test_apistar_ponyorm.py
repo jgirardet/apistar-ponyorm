@@ -5,7 +5,7 @@ from pony.orm import Database, Required, TransactionError
 
 # apistar_ponyorm
 from apistar_ponyorm import PonyDBSession
-
+import pony
 """
 ponyorm setup
 """
@@ -20,7 +20,8 @@ class A(db.Entity):
 db.connect(
     provider="sqlite",
     filename=":memory:",
-    create_tables=True, )
+    create_tables=True,
+)
 """ 
     Apistar Main App
 """
@@ -58,3 +59,13 @@ def test_error_close_db():
     r = cli.get('/fzefzefzef/')
 
     assert r.json() == 'Not found'
+
+
+def test_fail_if_not_found():
+    if pony.orm.core.local.db_session is not None:
+        db.__exit__()
+        r = cli.get('/')
+    r = cli.get('/')
+    r = cli.get('/fzefze/')
+    r = cli.get('/')
+    assert r.status_code == 200

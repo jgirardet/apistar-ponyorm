@@ -1,6 +1,7 @@
 # Third Party Libraries
 from apistar import http
 from pony.orm import Database, db_session
+import pony
 """
 Base functions to auto use @db_session  in  views.
 
@@ -18,7 +19,6 @@ will be closed carrefuly
 
 
 class PonyDBSession:
-
     def on_request(self):
         db_session.__enter__()
 
@@ -27,5 +27,6 @@ class PonyDBSession:
         return response
 
     def on_error(self, response: http.Response):
-        db_session.__exit__()
+        if pony.orm.core.local.db_session is not None:
+            db_session.__exit__()
         return response
