@@ -23,5 +23,5 @@ ipython = "*"
 [packages]
 
 pbr = ">=3.0"
-apistar = {editable = true, git = "https://github.com/encode/apistar.git", ref = "level-up"}
+apistar = "*"
 pony = {git = "https://github.com/ponyorm/pony.git", ref = "orm-migrations", editable = true}
