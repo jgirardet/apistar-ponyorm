@@ -4,9 +4,6 @@ apistar_ponyorm
 
 .. image:: https://travis-ci.org/jgirardet/apistar_ponyorm.svg?branch=master
     :target: https://travis-ci.org/jgirardet/apistar_ponyorm
-.. image:: https://readthedocs.org/projects/apistar_ponyorm/badge/?version=latest
-   :target: http://apistar_ponyorm.readthedocs.io/en/latest/?badge=latest
-   :alt: Documentation Status
 .. image:: https://coveralls.io/repos/github/jgirardet/apistar_ponyorm/badge.svg
    :target: https://coveralls.io/github/jgirardet/apistar_ponyorm
 .. image:: https://badge.fury.io/py/apistar_ponyorm.svg
@@ -19,24 +16,39 @@ Third-party for apistar using pony orm
 
 * License : GNU General Public License v3 
 * Documentation: https://apistar_ponyorm.readthedocs.org/en/latest/
-* Source: https://github.com/jgirardet/apistar_ponyorm
+* Source: https://github.com/jgirardet/apistar-ponyorm
 
 Features
---------
+---------
 
-Provide Basase functions to auto use @db_session  in  views.
+- Apistar Hook : PonyDBSession which give auto apply db_session to views.
+
+
+Usage
+-------
 
 This should be added in App declaration :
-app = App(
-    routes=[....],
-    run_before_handler=[ponydb_open],
-    run_after_handler=[ponydb_close],
-    run_on_exception=[ponydb_exception],
-    )
 
-It's important to add ponydb_exception to ensure that  database transaction
-will be closed carrefuly
+app = App(routes=[route], event_hooks=[PonyDBSession()])
+
+.. code-block:: python
+    
+    # main app.py file
+    from apistar_ponyorm import PonyDBSession
+    # ...
+    app = App(routes=[route], event_hooks=[PonyDBSession()])
 
 
-* TODO
+    # myviews.py
+    from myproject import db # PonyORM Database Instance
 
+    def myviews():
+      retun db.MyEntity.to_dict()
+
+    # No need to add @db_session
+
+
+Changelog
+-----------
+0.1.0 : 
+  - add PonyDBSession
