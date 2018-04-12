@@ -1,11 +1,11 @@
 .PHONY: build
 
-MODULE:=apistar_ponyorm.py
+MODULE:=apistar_ponyorm
 
 all: dev style checks requirements.txt  build dists test-unit test-coverage
 
 dev:
-	pipenv install --dev --python 3.6 --skip-lock
+	pipenv install --dev --python 3.6
 
 install-local:
 	pipenv install --python 3.6

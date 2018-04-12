@@ -1,11 +1,12 @@
 # Third Party Libraries
+import pony
 import pytest
 from apistar import App, Route, TestClient
 from pony.orm import Database, Required, TransactionError
 
 # apistar_ponyorm
 from apistar_ponyorm import PonyDBSession
-import pony
+
 """
 ponyorm setup
 """
