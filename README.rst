@@ -1,6 +1,5 @@
-===============================
-apistar_ponyorm
-===============================
+apistar-ponyorm
+###########################
 
 .. image:: https://travis-ci.org/jgirardet/apistar_ponyorm.svg?branch=master
     :target: https://travis-ci.org/jgirardet/apistar_ponyorm
@@ -11,21 +10,20 @@ apistar_ponyorm
    :alt: Pypi package
 
 
-Third-party for apistar using pony orm
-
+**Third-party for apistar using pony orm**
 
 * License : GNU General Public License v3 
 * Documentation: https://apistar_ponyorm.readthedocs.org/en/latest/
 * Source: https://github.com/jgirardet/apistar-ponyorm
 
 Features
----------
+**********
 
 - Apistar Hook : PonyDBSession which give auto apply db_session to views.
 
 
 Usage
--------
+********
 
 This should be added in App declaration :
 
@@ -50,5 +48,5 @@ app = App(routes=[route], event_hooks=[PonyDBSession()])
 
 Changelog
 -----------
-0.1.0 : 
+0.2.0 : 
   - add PonyDBSession
