@@ -2,6 +2,7 @@
 import pony
 from apistar import http
 from pony.orm import Database, db_session
+
 """
 Base functions to auto use @db_session  in  views.
 
@@ -24,7 +25,8 @@ class PonyDBSession:
         db_session.__enter__()
 
     def on_response(self, response: http.Response):
-        db_session.__exit__()
+        if pony.orm.core.local.db_session is not None:
+            db_session.__exit__()
         return response
 
     def on_error(self, response: http.Response):
