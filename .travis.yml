@@ -9,12 +9,13 @@ python:
   - 3.5
 
 
-install:
-  - pip install -U pip pipenv
-  - pip install python-coveralls
-  - make dev
+cache:
+  pip: true
+  directories:
+    - $HOME/.cache/pypoetry
 
-script:
-  - make check
-  - make dist
-  - make test-coverage
+install:
+  - pip install poetry
+  - poetry install -v
+
+script: pytest

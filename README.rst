@@ -49,5 +49,7 @@ app = App(routes=[route], event_hooks=[PonyDBSession()])
 Changelog
 **********
 
+0.2.10 :
+  - use poetry
 0.2.0 : 
   - add PonyDBSession

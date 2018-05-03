@@ -18,7 +18,9 @@ class A(db.Entity):
     aaa = Required(str)
 
 
-db.connect(provider="sqlite", filename=":memory:", create_tables=True)
+db.bind(provider="sqlite", filename=":memory:")
+db.generate_mapping(create_tables=True)
+
 """ 
     Apistar Main App
 """

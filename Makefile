@@ -2,71 +2,22 @@
 
 MODULE:=apistar_ponyorm
 
-all: dev style checks requirements.txt  build dists test-unit test-coverage
-
-dev:
-	pipenv install --dev --python 3.6
-
-install-local:
-	pipenv install --python 3.6
-
-install-system:
-	pipenv install --system
-
-style: isort autopep8 yapf
+style: isort
 
 isort:
-	pipenv run isort -y
-
-autopep8:
-	pipenv run autopep8 --in-place --recursive setup.py $(MODULE)
-
-yapf:
-	pipenv run yapf --recursive -i $(MODULE)
-
-checks:
-	pipenv check
+	isort -y
 
 flake8:
-	pipenv run python setup.py flake8
+	flake8
 
-build: dists
-
-shell:
-	pipenv shell
-
-test-unit:
-	pipenv run pytest --cov $(MODULE) --cov-report term-missing --cov-fail-under=100
+test:
+	pytest --cov $(MODULE) --cov-report term-missing --cov-fail-under=100
 
 test-coverage:
-	pipenv run py.test  --cov $(MODULE) --cov-report term-missing --cov-report html
+	py.test  --cov $(MODULE) --cov-report term-missing --cov-report html
 
-requirements.txt:
-	
-	# generate requirements.txt from Pipfile
-	# needed until PBR supports `Pipfile`
-	pipenv run pipenv_to_requirements
-	
-	
 
-Pipfile.lock:	Pipfile
-	pipenv lock
-
-dists: requirements.txt sdist wheels
-
-sdist:
-	pipenv run python setup.py sdist
-
-wheels:
-	pipenv run python setup.py bdist_wheel
-
-deploy: build
-	 pipenv run twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
-
-update:
-	pipenv update -d
-
-githook: checks style requirements.txt
+githook: flake8 style
 	
 push:
 	git status
@@ -96,16 +47,3 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -rf .pytest_cache
 
-
-
-# aliases to gracefully handle typos on poor dev's terminal
-check: checks
-devel: dev
-develop: dev
-dist: dists
-install: install-system
-pypi: pypi-publish
-styles: style
-test: test-unit
-unittest: test-unit
-wheel: wheels
