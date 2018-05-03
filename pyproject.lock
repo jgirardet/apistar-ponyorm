@@ -546,19 +546,11 @@ platform = "UNKNOWN"
 [package.requirements]
 python = "<3.6"
 platform = "win32"
-[[package]]
-name = "yapf"
-version = "0.21.0"
-description = "A formatter for Python code."
-category = "dev"
-optional = false
-python-versions = "*"
-platform = "*"
 
 [metadata]
 python-versions = "*"
 platform = "*"
-content-hash = "052921e3575f88b7b5baed5b4ca1618c746070a182a298296f88f3523ae0fd3f"
+content-hash = "b03a37239eab954151c8c345412d6e2f9782c0117b9aa1858e0634bcef108bc3"
 
 [metadata.hashes]
 apistar = [ "4d7efd375dab42f9fd5d2d44cba92addbdfac78c05c7aa7beb2e3ca153416db4",]
@@ -611,4 +603,3 @@ wcwidth = [ "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c", 
 werkzeug = [ "d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b", "c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c",]
 whitenoise = [ "15f43b2e701821b95c9016cf469d29e2a546cb1c7dead584ba82c36f843995cf", "9d81515f2b5b27051910996e1e860b1332e354d9e7bcf30c98f21dcb6713e0dd",]
 win-unicode-console = [ "d4142d4d56d46f449d6f00536a73625a871cba040f0bc1a2e305a04578f07d1e",]
-yapf = [ "dd23b52edbb4c0461d0383050f7886175b0df9ab8fd0b67edd41f94e25770993", "7d8ae3567f3fb2d288f127d35e4decb3348c96cd091001e02e818465da618f90",]
