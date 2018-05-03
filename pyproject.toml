@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apistar-ponyorm"
-version = "0.2.9"
+version = "0.2.10"
 description = "Third-party for apistar using pony orm"
 authors = ["Jimmy Girardet <ijkl@netc.fr>"]
 license = "GPL-3.0+"

@@ -1,11 +1,11 @@
 apistar-ponyorm
 ###########################
 
-.. image:: https://travis-ci.org/jgirardet/apistar_ponyorm.svg?branch=master
+.. image:: https://travis-ci.org/jgirardet/apistar-ponyorm.svg?branch=master
     :target: https://travis-ci.org/jgirardet/apistar_ponyorm
-.. image:: https://coveralls.io/repos/github/jgirardet/apistar_ponyorm/badge.svg
+.. image:: https://coveralls.io/repos/github/jgirardet/apistar-ponyorm/badge.svg
    :target: https://coveralls.io/github/jgirardet/apistar_ponyorm
-.. image:: https://badge.fury.io/py/apistar_ponyorm.svg
+.. image:: https://badge.fury.io/py/apistar-ponyorm.svg
    :target: https://pypi.python.org/pypi/apistar_ponyorm/
    :alt: Pypi package
 
