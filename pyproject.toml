@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apistar-ponyorm"
-version = "0.2.10"
+version = "0.2.12"
 description = "Third-party for apistar using pony orm"
 authors = ["Jimmy Girardet <ijkl@netc.fr>"]
 license = "GPL-3.0+"
@@ -11,14 +11,16 @@ keywords = ['apistar', 'pony']
 
 
 [tool.poetry.dependencies]
+# python = "*"
 python = "^3.5"
-apistar = "^0.5.10"
-pony = "^0.7.3"
+apistar = ">=0.5"
+# pony = {git = "https://github.com/ponyorm/pony.git", branch = "orm-migrations"}
+pony = ">=0.7"
 
 [tool.poetry.dev-dependencies]
-pytest = "^3.5"
+pytest = "*"
 flake8 = "*"
 ipython = "*"
 pytest-cov = "*"
 pytest-pythonpath = "*"
-isort = "^4.3"
+isort = "*"
